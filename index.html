@@ -4,12 +4,15 @@
 
 
 <head>
-         <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-   })(window,document,'script','dataLayer','GTM-5T6XCLK');</script>
+   <!-- Google Tag Manager -->
+   <script>(function (w, d, s, l, i) {
+         w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+               new Date().getTime(), event: 'gtm.js'
+         }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+               'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-5T6XCLK');</script>
    <!-- End Google Tag Manager -->
    <!-- Required meta tags -->
 
@@ -67,12 +70,12 @@
                         name="mobile" id="mobile-popup" placeholder="Mobile*" class="form-control" required />
                   </div>
                   <div class="form-group">
-                     <input type="text" 
-                        name="location" id="location-popup" placeholder="Your Location*" class="form-control" required />
-                  </div>
-                  <div class="form-group">
-                     <input type="text"
-                        name="city" id="city-popup" placeholder="Your City*" class="form-control" required />
+                     <select class="form-control" name="config" id="config-popup"
+                        placeholder="Your Prefered Configuration" required>
+                        <option value="" disabled selected>Select Prefered configuration</option>
+                        <option value="2BHK">2BHK</option>
+                        <option value="3BHK">3BHK</option>
+                     </select>
                   </div>
                   <div class="text-center">
                      <input type="submit" id="submit_button-popup" class="btn" value="Submit">
@@ -92,229 +95,111 @@
       <!-- <span id="fixed-download" class="text">
          Download Brochure
       </span> -->
-      <header>
-         <div class="container">
-            
-            <!-- <div class="logo-section">
-               <div class="l-logo">
-                  <a>
-                     <img src="images/Logo-small-sans.webp" width="100px" alt="logo" title="AMK Hills">
-                  </a>
-               </div>
-               <div class="r-logo text-right">
-                  <a> <img src="images/Igatpuri.webp" alt="location" title="Location: Igatpuri">
-                  </a>
-               </div>
-            </div> -->
-         </div>
-      </header>
       <div>
-         <img id="banner-image" src="./images/Elevate/Top_Banner.png" alt="" srcset="">
+         <div class="top-banner">
+            <img id="banner-image" src="./images/Elevate/New_Top_Banner.jpg" alt="" srcset="">
+            <span class="form">
+               <div class="form-section ">
+                  <form id="leadFormMobile" class="">
+                     <h1 class="">GET THE DEAL NOW</h1>
+                     <hr class="orange">
+
+
+                     <div class="form-group mt-3">
+                        <input type="text" name="name" id="m-name" placeholder="Your Name*" class="form-control"
+                           required />
+                     </div>
+                     <div class="form-group">
+                        <input type="email" name="email" id="m-email" placeholder="Your Email*" class="form-control"
+                           required />
+                     </div>
+                     <div class="form-group">
+                        <input type="text" maxlength="10" minlength="10" onkeypress="return numbersonly(event)"
+                           name="mobile" id="m-mobile" placeholder="Mobile*" class="form-control" required />
+                     </div>
+                     <div class="form-group">
+                        <select class="form-control" name="config" id="m-config"
+                           placeholder="Your Prefered Configuration" required>
+                           <option value="" disabled selected>Select Prefered configuration</option>
+                           <option value="2BHK">2BHK</option>
+                           <option value="3BHK">3BHK</option>
+                        </select>
+                     </div>
+                     <!-- <div class="form-group">
+                        <input type="text" maxlength="6" minlength="6" onkeypress="return numbersonly(event)"
+                           name="otp" id="otp" placeholder="OTP" class="form-control" style="display: none;"
+                           onchange="isValidOTP()" />
+                     </div> -->
+
+                     <div class="text-center">
+                        <!-- <a href="" class="" type="submit">Submit</a> -->
+                        <input type="submit" id="submit_button" class="btn form-control elevate-theme-bg" value="Submit">
+                     </div>
+
+                     <div class="text-center">
+                        <input type="button" id="verify_otp_button" class="btn" value="Verify"
+                           style="display: none; cursor: not-allowed;" onclick="verifyOtpAPI()" disabled>
+                     </div>
+                  </form>
+                  <div class="Thankyou" style="display: none;">
+                     <h2 class="th2">Thank you for your enquiry</h2>
+                     <p>Our representative will get in touch with you shortly</p>
+                     <div class="text-center">
+                        <a href="#" class=" btn" type="button">Know More</a>
+                     </div>
+                  </div>
+               </div>
+
+            </span>
+
+         </div>
          <img id="banner-image" src="./images/Elevate/BannerImg.png" alt="" srcset="">
          <img id="banner-image" src="./images/Elevate/Amenities.png" alt="" srcset="">
          <img id="banner-image" src="./images/Elevate/Close_proximity.png" alt="" srcset="">
-         <img id="banner-image" src="./images/Elevate/Footer.jpg" alt="" srcset="">
-      <!-- </div>
 
-      <main>
+
+
+      </div>
+
          <script>
             var myDaemon = '';
             localStorage.setItem('myTimestamp', Date.now());
          </script>
-         <div class="container-fluid">
-            <div class="text-center">
-               <h1>
-                  AMK Hills
-                  <span>
-                     Igatpuri
-                  </span>
-               </h1>
-               <img src="./images/Rectangle 4 copy.webp" alt="" srcset="">
-
-            </div>
-            <div class="row">
-               <div class="col-md-6 text-white desc-text p-10" style="overflow-x:visible !important;">
-                  <ul>
-                     <li>
-                        Luxurious Weekend Homes & Lifestyle Villas at Bhavali Hills, Igatpuri
-                     </li>
-                     <li>
-                        Igatpuri is a hill station at 600m above sea level in the Western Ghats
-                     </li>
-                     <li>Surrounded by natural attractions like mountains, valleys, rivers, lakes, waterfalls, and
-                        wildlife sanctuary
-                     </li>
-                     <li>Ideal destination for trekking, jungle trails, zipline, boating, river rafting, rappelling, and
-                        mountain biking
-                     </li>
-                     <li>Visit Dhamma Giri Vipassana Academy, Ghatandevi & Saptashrungi Devi Temples, Bhavli & Vaitarna
-                        Dams, and nearby forts
-                     </li>
-                     <li>Easily accessible from Mumbai (130km, approx. 2 hours), Pune (240km, approx. 4 hours), and
-                        Nashik (43km)
-                     </li>
-                  </ul>
+            <div class="text-center elevate-theme-bg  mx-auto row footer">
+               <div class="col-6">
+                  <p>
+                     The pictures and images shown are indicative and for representational purpose only. The terms for the
+                     agreement for sale if entered into by parties will solely govern, control and prevail. Financial
+                     scheme offers
+                     various pre-EMI options to choose from and Bank / Financial institution decisions in this matter will
+                     be final.
+                     T& C apply.
+                  </p>
                </div>
-               <div class="col-md-6 p-10">
-                  <div id="main-img"></div>
+         
+               <div class="col-4">
+                  <p>
+                     <strong>Shriraam Pioneer Developers Pvt Ltd </strong> 
+                     Pushpanjali Residency phase Ill, Near Tieten Hospital,
+                     Ghodbunder Road, Ovale, Thane West
+                  </p>
                </div>
-            </div>
-            <div class="row">
-               <div class="col-md-6 text-white desc-text p-10">
-                  <div class="text-center">
-                     <h1>
-                        Project<span>
-                           Glimpses
-                        </span>
-                     </h1>
-                     <img src="./images/Rectangle 4 copy.webp" alt="" srcset="">
-
-                  </div>
-                  <div class="" style="overflow-x:visible !important;">
-
-                     <li>Riverfront Boardwalk
-
-                     </li>
-                     <li>24 x 7 security with guards and CCTV cameras
-
-                     </li>
-                     <li>Fullly loaded club house
-
-                     </li>
-                     <li>Private waterfall
-
-                     </li>
-                     <li>Staff for regular upkeep
-
-                     </li>
-                     <li>Abundant plantation within campus
-
-                     </li>
-                     <li>Gourmet restaurant and a grocery store for all essentials</li>
-                  </div>
-
-                  <hr>
-                  <div>
-                                       <div class="owl-carousel owl-theme interiorcarousel">
-                     <div class="item">
-                        <div class="latest-post">
-                           <div class="latest-post-inner match-height">
-                              <img src="./images/carousel/1.webp" style="width:100%">
-
-                           </div>
-                        </div>
-                     </div>
-                     <div class="item">
-                        <div class="latest-post">
-                           <div class="latest-post-inner match-height">
-                              <img src="./images/carousel/12.webp" style="width:100%">
-                           </div>
-                        </div>
-                     </div>
-                     <div class="item">
-                        <div class="latest-post">
-                           <div class="latest-post-inner match-height">
-                              <img src="./images/carousel/4.webp" style="width:100%">
-                           </div>
-                        </div>
-                     </div>
-                     <div class="item">
-                        <div class="latest-post">
-                           <div class="latest-post-inner match-height">
-                              <img src="./images/carousel/8.webp" style="width:100%">
-                           </div>
-                        </div>
-                     </div>
-                     <div class="item">
-                        <div class="latest-post">
-                           <div class="latest-post-inner match-height">
-                              <img src="./images/carousel/1.webp" style="width:100%">
-
-                           </div>
-                        </div>
-                     </div>
-                     <div class="item"></div>
-                  </div>
-
-                  </div>
-
-
-
+               <div class="col-2">
+                  <p>
+                     RERA number <br>
+                     P51700050376 <br>     
+                     <img src="./images/Elevate/Footer.jpg" alt="" srcset="">
+         
                </div>
-               <div class="col-md-6 text-white">
-
-                  <div class="form-section p-10">
-                     <form id="leadForm" class="p-10">
-                        <h2 class="text-center">GET THE DEAL NOW</h2>
-                        <div class="form-group mt-3">
-                           <input type="text" name="name" id="name" placeholder="Your Name*" class="form-control"
-                              required />
-                        </div>
-                        <div class="form-group">
-                           <input type="email" name="email" id="email" placeholder="Your Email*" class="form-control"
-                              required />
-                        </div>
-                        <div class="form-group">
-                           <input type="text" maxlength="10" minlength="10" onkeypress="return numbersonly(event)"
-                              name="mobile" id="mobile" placeholder="Mobile*" class="form-control" required />
-                        </div>
-                        <div class="form-group">
-                           <input type="text"  
-                              name="location" id="location" placeholder="Your Location*" class="form-control" required />
-                        </div>
-                        <div class="form-group">
-                           <input type="text" 
-                              name="city" id="city" placeholder="Your City*" class="form-control" required />
-                        </div>
-
-                        <div class="text-center">
-                           <input type="submit" id="submit_button" class="btn" value="Submit">
-                        </div>
-
-                        <div class="text-center">
-                           <input type="button" id="verify_otp_button" class="btn" value="Verify"
-                              style="display: none; cursor: not-allowed;" onclick="verifyOtpAPI()" disabled>
-                        </div>
-                     </form>
-                     <div class="Thankyou" style="display: none;">
-                        <h2 class="th2">Thank you for your enquiry</h2>
-                        <p>Our representative will get in touch with you shortly</p>
-                        <div class="text-center">
-                           <a href="#" class=" btn" type="button">Know More</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+         
             </div>
 
-            <div class="text-center">
-               <img src="./images/Rectangle 4 copy.webp" alt="" srcset="">
-               <footer>
-                  <div class="container">
-                     <p>
-                        Disclaimer:
-                        The content is for information purposes only and does not constitute an offer to avail of any
-                        service.
-                        Images for representation purpose only. This is not the official website. This website is
-                        maintained by
-                        authorized marketing partner. We may also share data, information with rera registered sub
-                        brokers/companies/projects for further processing. You can read our <a href="./privacy.html">privacy policy</a> here. All Rights Reserved.
-                     </p>
+   </div>
 
-                  </div>
-               </footer>
-
-
-            </div>
-
-         </div>
-
-
-      </main> -->
    </div>
 
    <div class="mobile-only">
-      <header>
+      <!-- <header>
          <div class="container">
             <div class="logo-section">
                <div class="l-logo">
@@ -328,9 +213,19 @@
                </div>
             </div>
          </div>
-      </header>
+      </header> -->
       <div>
-         <img id="banner-image" src="./images/mobile4.jpg" alt="" srcset="">
+         <img id="banner-image" src="./images/Elevate/M_New_Top_Banner.jpg" alt="" srcset="">
+         <img id="banner-image" src="./images/Elevate/BannerImg.png" alt="" srcset="">
+         <img id="banner-image" src="./images/Elevate/m_Amenities.png" alt="" srcset="">
+         <div>
+            <img id="banner-image" src="./images/Elevate/Icons.png" alt="" srcset="">
+            <img id="banner-image" src="./images/Elevate/m_Close_proximity.jpg" alt="" srcset="">
+
+
+         </div>
+
+
       </div>
 
       <main>
@@ -340,11 +235,15 @@
          </script>
          <div class="container-fluid">
             <div class="row">
-               <div class="col-xl-6 text-white">
+               <div class="col-xl-6 p-4 text-white">
+
 
                   <div class="form-section ">
                      <form id="leadFormMobile" class="">
-                        <h2 class="text-center">GET THE DEAL NOW</h2>
+                        <h1 class="">GET THE DEAL NOW</h1>
+                        <hr class="orange">
+
+
                         <div class="form-group mt-3">
                            <input type="text" name="name" id="m-name" placeholder="Your Name*" class="form-control"
                               required />
@@ -358,12 +257,12 @@
                               name="mobile" id="m-mobile" placeholder="Mobile*" class="form-control" required />
                         </div>
                         <div class="form-group">
-                           <input type="text"  
-                              name="location" id="m-location" placeholder="Your Location*" class="form-control" required />
-                        </div>
-                        <div class="form-group">
-                           <input type="text" 
-                              name="city" id="m-city" placeholder="Your City*" class="form-control" required />
+                           <select class="form-control" name="config" id="m-config"
+                              placeholder="Your Prefered Configuration" required>
+                              <option value="" disabled selected>Select Prefered configuration</option>
+                              <option value="2BHK">2BHK</option>
+                              <option value="3BHK">3BHK</option>
+                           </select>
                         </div>
                         <!-- <div class="form-group">
                            <input type="text" maxlength="6" minlength="6" onkeypress="return numbersonly(event)"
@@ -373,7 +272,7 @@
 
                         <div class="text-center">
                            <!-- <a href="" class="" type="submit">Submit</a> -->
-                           <input type="submit" id="submit_button" class="btn" value="Submit">
+                           <input type="submit" id="submit_button" class="btn form-control elevate-theme-bg" value="Submit">
                         </div>
 
                         <div class="text-center">
@@ -390,156 +289,112 @@
                      </div>
                   </div>
                </div>
-               <div class="col-xl-6 pt-4 ">
-                  <div class="text-center mb-4">
-                     <h1>
-                        AMK Hills <br>
-                        <span>
-                           Igatpuri
-                        </span>
-                     </h1>
-                     <img src="./images/Rectangle 4 copy.webp" alt="" srcset="">
+               <!-- Slideshow container -->
 
-                  </div>
-                  <div id="main-img">
 
-                  </div>
-               </div>
-               <div class="col-xl-6 text-white desc-text mt-4 pt-4" style="overflow-x:visible;">
-                  <ul>
-                     <li>
-                        Luxurious Weekend Homes & Lifestyle Villas at Bhavali Hills, Igatpuri
-                     </li>
-                     <li>
-                        Igatpuri is a hill station at 600m above sea level in the Western Ghats
-                     </li>
-                     <li>Surrounded by natural attractions like mountains, valleys, rivers, lakes, waterfalls, and
-                        wildlife sanctuary
-                     </li>
-                     <li>Ideal destination for trekking, jungle trails, zipline, boating, river rafting, rappelling, and
-                        mountain biking
-                     </li>
-                     <li>Visit Dhamma Giri Vipassana Academy, Ghatandevi & Saptashrungi Devi Temples, Bhavli & Vaitarna
-                        Dams, and nearby forts
-                     </li>
-                     <li>Easily accessible from Mumbai (130km, approx. 2 hours), Pune (240km, approx. 4 hours), and
-                        Nashik (43km)
-                     </li>
-                  </ul>
-               </div>
-               <div class="col-xl-6 pt-4">
-                  <div class="text-center">
-                     <h1>
-                        Project<span>
-                           Glimpses
-                        </span>
-                     </h1>
-                     <img src="./images/Rectangle 4 copy.webp" alt="" srcset="">
-
-                  </div>
-                  <span class="text-white desc-text p-10">
-
-                     <li>Riverfront Boardwalk
-
-                     </li>
-                     <li>24 x 7 security with guards and CCTV cameras
-
-                     </li>
-                     <li>Fullly loaded club house
-
-                     </li>
-                     <li>Private waterfall
-
-                     </li>
-                     <li>Staff for regular upkeep
-
-                     </li>
-                     <li>Abundant plantation within campus
-
-                     </li>
-                     <li>Gourmet restaurant and a grocery store for all essentials</li>
-                  </span>
-                  <!-- Slideshow container -->
-
-                  <div class="owl-carousel owl-theme interiorcarousel-m">
-                     <div class="item">
-                        <div class="latest-post">
-                           <div class="latest-post-inner match-height">
-                              <img src="./images/carousel/1.webp" style="width:100%">
-
-                           </div>
-                        </div>
-                     </div>
-                     <div class="item">
-                        <div class="latest-post">
-                           <div class="latest-post-inner match-height">
-                              <img src="./images/carousel/12.webp" style="width:100%">
-                           </div>
-                        </div>
-                     </div>
-                     <div class="item">
-                        <div class="latest-post">
-                           <div class="latest-post-inner match-height">
-                              <img src="./images/carousel/4.webp" style="width:100%">
-                           </div>
-                        </div>
-                     </div>
-                     <div class="item">
-                           <div class="latest-post-inner match-height">
-                              <img src="./images/carousel/8.webp" style="width:100%">
-                           </div>
-                     </div>
-                     <div class="item">
-                        <div class="latest-post">
-                           <div class="latest-post-inner match-height">
-                              <img src="./images/carousel/1.webp" style="width:100%">
-
-                           </div>
-                        </div>
-                     </div>
-                     <div class="item"> 
-                       
-                     </div>
-
-                  </div>
-
-                  <!-- The dots/circles -->
-                  <!-- <div style="text-align:center">
+               <!-- The dots/circles -->
+               <!-- <div style="text-align:center">
                      <span class="dot" onclick="currentSlide(1)"></span>
                      <span class="dot" onclick="currentSlide(2)"></span>
                      <span class="dot" onclick="currentSlide(3)"></span>
                   </div> -->
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-xl-6 p-4 text-white">
+
+               <div class="text-LEFT">
+                  <h1>
+                     PROJECT GLIMPSES
+                     </span>
+                  </h1>
+                  <hr class="orange">
                </div>
             </div>
-            <div class="row">
 
+            <div class=" col-xl-6 owl-carousel owl-theme interiorcarousel-m">
+               <div class="item">
+                  <div class="latest-post">
+                     <div class="latest-post-inner match-height">
+                        <img src="./images/Carousel/1806-BUSINESS CENTRE-cam-1 A copy.jpg" style="width:100%">
 
-            </div>
-
-            <div class="text-center">
-               <img src="./images/Rectangle 4 copy.webp" alt="" srcset="">
-               <footer>
-                  <div class="container">
-                     <p>
-                        Disclaimer:
-                        The content is for information purposes only and does not constitute an offer to avail of any
-                        service.
-                        Images for representation purpose only. This is not the official website. This website is
-                        maintained by
-                        authorized marketing partner. We may also share data, information with rera registered sub
-                        brokers/companies/projects for further processing. You can read our <a href="./privacy.html">privacy policy</a> here. All Rights Reserved.
-                     </p>
-
+                     </div>
                   </div>
-               </footer>
+               </div>
+               <div class="item">
+                  <div class="latest-post">
+                     <div class="latest-post-inner match-height">
+                        <img src="./images/Carousel/1806-CAM-1 MOVIE THEATRE.jpg" style="width:100%">
+                     </div>
+                  </div>
+               </div>
+               <div class="item">
+                  <div class="latest-post">
+                     <div class="latest-post-inner match-height">
+                        <img src="./images/Carousel/1806-CAM-5.jpg" style="width:100%">
+                     </div>
+                  </div>
+               </div>
+               <div class="item">
+                  <div class="latest-post">
+                     <div class="latest-post-inner match-height">
+                        <img src="./images/Carousel/1806-GYM-cam-1.jpg" style="width:100%">
 
+                     </div>
+                  </div>
+               </div>
+
+               <div class="item">
+                  <div class="latest-post">
+                     <div class="latest-post-inner match-height">
+                        <img src="./images/Carousel/location-symbol-with-landscape-background0.jpg" style="width:100%">
+
+                     </div>
+                  </div>
+               </div>
+               <div class="item">
+                  <div class="item">
+
+                     <div class="item">
+
+                     </div>
+                  </div>
+
+               </div>
 
             </div>
 
          </div>
 
+         <div class="text-center elevate-theme-bg  mx-auto row">
+            <div class="col-xl-6 footer">
+               <p>
+                  The pictures and images shown are indicative and for representational purpose only. The terms for the
+                  agreement for sale if entered into by parties will solely govern, control and prevail. Financial
+                  scheme offers
+                  various pre-EMI options to choose from and Bank / Financial institution decisions in this matter will
+                  be final.
+                  T& C apply. You can read our <a href="./privacy.html">privacy policy</a>
+                  <hr>
+                  <strong>Shriraam Pioneer Developers Pvt Ltd </strong> <br>
+                  Pushpanjali Residency phase Ill, Near Tieten Hospital,
+                  Ghodbunder Road, Ovale, Thane West
+                  <hr>
+                  RERA number <br>
+                  P51700050376 <br>
+                  <img src="./images/Elevate/Footer.jpg" alt="" srcset="">
 
-      </main>
+               </p>
+
+            </div>
+
+
+         </div>
+
+   </div>
+
+
+   </main>
    </div>
 
 
@@ -552,7 +407,7 @@
    <script src="js/main.js"></script>
 
    <script>
-            $('.interiorcarousel').owlCarousel({
+      $('.interiorcarousel').owlCarousel({
          items: 1,
          loop: false,
          margin: 20,
@@ -580,7 +435,7 @@
          margin: 20,
          autoplay: true,
          autoplayTimeout: 10000,
-         smartSpeed: 1500,
+         smartSpeed: 3500,
          // nav: true,
          responsiveClass: true,
          responsive: {

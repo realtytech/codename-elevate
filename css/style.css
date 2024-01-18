@@ -2,12 +2,12 @@
 
 @font-face {
   font-family:gotham-black-webfont;
-  src: url(../fonts/gotham-black-webfont.ttf);
+  src: url(../fonts/AmsiPro-Bold.otf);
   font-display: swap;
 }
 @font-face {
   font-family:gotham-book;
-  src: url(../fonts/gotham-book-webfont.ttf);
+  src: url(../fonts/AmsiPro-Black.otf);
   font-display: swap;
 }
 *{
@@ -21,7 +21,7 @@ li{
 
 body{
 		font-family: gotham-black-webfont;
-		background-color: #be6a47;
+		/* background-color: ; */
 }
 header{
 	background: #00282900;
@@ -65,18 +65,18 @@ main .responsive img{
 
 footer{
 	/* background: #0C0C0C; */
-	color: #7b7b7b;
+	color: #ffffff;
 	padding: 1rem 0;
 	text-align: center;
-	font-family: Lato;
-    font-size: 11px;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* font-size: 13px; */
 	font-weight: 500;
 	
 	
 	width: 90vw;
 }
 footer .fa{
-	color: #7b7b7b;
+	color: #ffffff;
 }
 
 .modal{
@@ -90,12 +90,12 @@ footer .fa{
 
 }
 h1{
-	color: #eeeeee;
-	font-family: gotham-book;
+	color: #ea8136;
+	/* font-family: gotham-book; */
 }
 h1 span{
-	color: #ffce7b;
-	font-weight: 900 !important;
+	color: #ea8136;
+	/* font-weight: 900 !important; */
 	
 }
 .p-10{
@@ -127,4 +127,29 @@ h1 span{
 	cursor: pointer;
 
 
+}
+
+.elevate-theme-bg
+{
+	background: rgb(183,102,72) !important;
+background: linear-gradient(0deg, rgba(183,102,72,1) 0%, rgba(222,124,60,1) 50%, rgba(183,102,72,1) 100%) !important;
+color: #eeeeee !important;
+}
+
+.footer {
+	border: 2px white dashed !important;
+}
+
+hr{
+	color: white;
+	background-color: #ffffff;
+}
+hr.orange
+{
+	font-size: large;
+	height: 3px;
+	margin: 0 -10px;
+	padding: 0px;
+	color: #ea8136;
+	background-color: #ea8136;
 }

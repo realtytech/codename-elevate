@@ -170,6 +170,7 @@ h2{
 }
 
 .footer {
-	margin: 3rem;
+	margin: 2rem;
+  font-size: small;
 	border: 2px white dashed !important;
 }

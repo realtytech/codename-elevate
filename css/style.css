@@ -153,3 +153,6 @@ hr.orange
 	color: #ea8136;
 	background-color: #ea8136;
 }
+h2.text-center {
+	overflow-y: hidden;
+	}

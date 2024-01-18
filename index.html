@@ -43,7 +43,10 @@
 </head>
 
 <body>
-   
+   <script>
+      var myDaemon = '';
+      localStorage.setItem('myTimestamp', Date.now());
+   </script>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTBFZX2W"
    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -103,25 +106,25 @@
             <img id="banner-image" src="./images/Elevate/New_Top_Banner.webp" alt="" srcset="">
             <span class="form">
                <div class="form-section ">
-                  <form id="leadFormMobile" class="">
+                  <form id="leadForm" class="">
                      <h1 class="">GET THE DEAL NOW</h1>
                      <hr class="orange">
 
 
                      <div class="form-group mt-3">
-                        <input type="text" name="name" id="m-name" placeholder="Your Name*" class="form-control"
+                        <input type="text" name="name" id="name" placeholder="Your Name*" class="form-control"
                            required />
                      </div>
                      <div class="form-group">
-                        <input type="email" name="email" id="m-email" placeholder="Your Email*" class="form-control"
+                        <input type="email" name="email" id="email" placeholder="Your Email*" class="form-control"
                            required />
                      </div>
                      <div class="form-group">
                         <input type="text" maxlength="10" minlength="10" onkeypress="return numbersonly(event)"
-                           name="mobile" id="m-mobile" placeholder="Mobile*" class="form-control" required />
+                           name="mobile" id="mobile" placeholder="Mobile*" class="form-control" required />
                      </div>
                      <div class="form-group">
-                        <select class="form-control" name="config" id="m-config"
+                        <select class="form-control" name="config" id="config"
                            placeholder="Your Prefered Configuration" required>
                            <option value="" disabled selected>Select Prefered configuration</option>
                            <option value="2BHK">2BHK</option>
@@ -157,6 +160,7 @@
 
          </div>
          <img id="banner-image" src="./images/Elevate/BannerImg.webp" alt="" srcset="">
+         
          <img id="banner-image" src="./images/Elevate/Amenities.webp" alt="" srcset="">
          <img id="banner-image" src="./images/Elevate/Close_proximity.webp" alt="" srcset="">
 
@@ -164,10 +168,7 @@
 
       </div>
 
-         <script>
-            var myDaemon = '';
-            localStorage.setItem('myTimestamp', Date.now());
-         </script>
+
             <div class="text-center elevate-theme-bg  mx-auto row footer">
                <div class="col-6">
                   <p>
@@ -184,7 +185,7 @@
                   <p>
                      <strong>Shriraam Pioneer Developers Pvt Ltd </strong> 
                      Pushpanjali Residency phase Ill, Near Tieten Hospital,
-                     Ghodbunder Road, Ovale, Thane West
+                     GB Road, Thane (W)
                   </p>
                </div>
                <div class="col-2">
@@ -220,6 +221,10 @@
       <div>
          <img id="banner-image" src="./images/Elevate/M_New_Top_Banner.webp" alt="" srcset="">
          <img id="banner-image" src="./images/Elevate/BannerImg.webp" alt="" srcset="">
+         <div>
+            <br>
+            <br>
+         </div>
          <img id="banner-image" src="./images/Elevate/m_Amenities.webp" alt="" srcset="">
          <div>
             <img id="banner-image" src="./images/Elevate/Icons.webp" alt="" srcset="">
@@ -381,7 +386,7 @@
                   <hr>
                   <strong>Shriraam Pioneer Developers Pvt Ltd </strong> <br>
                   Pushpanjali Residency phase Ill, Near Tieten Hospital,
-                  Ghodbunder Road, Ovale, Thane West
+                  GB Road, Thane (W)
                   <hr>
                   RERA number <br>
                   P51700050376 <br>

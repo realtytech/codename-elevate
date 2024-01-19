@@ -205,7 +205,7 @@ function numbersonly(e) {
         console.log(response);
         data = data['req'];
         // storeLeadInDB(data["name"], data["email"], data["mobile"], JSON.stringify(response));
-        setTimeout(function redirect_response() { window.location.href = "response.html"; }, 2000);
+        setTimeout(function redirect_response() { window.location.href = "response.html"; }, 10);
         return;
   
     });

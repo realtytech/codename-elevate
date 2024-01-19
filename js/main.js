@@ -100,6 +100,8 @@ function numbersonly(e) {
     var config = $(configSelector).val();
     var mobile = $(mobileInputSelector).val();
     $(submitButton).prop('disabled', true);
+    var spinner = document.getElementById("spinner");
+    spinner.classList.remove("hidden");
     
   
     if (name == "") {
@@ -205,6 +207,8 @@ function numbersonly(e) {
         console.log(response);
         data = data['req'];
         // storeLeadInDB(data["name"], data["email"], data["mobile"], JSON.stringify(response));
+        var spinner = document.getElementById("spinner");
+        spinner.classList.add("hidden");
         setTimeout(function redirect_response() { window.location.href = "response.html"; }, 10);
         return;
   

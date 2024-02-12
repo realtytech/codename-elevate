@@ -226,7 +226,10 @@ function storeLeadInSFDC(data) {
     // storeLeadInDB(data["name"], data["email"], data["mobile"], JSON.stringify(response));
     var spinner = document.getElementById("spinner");
     spinner.classList.add("hidden");
-    setTimeout(function redirect_response() { window.location.href = "response.html"; }, 10);
+    setTimeout(function redirect_response() { 
+      var spinner = document.getElementById("spinner");
+      spinner.classList.add("hidden");
+      window.location.href = "response.html"; }, 10);
     return;
 
   });

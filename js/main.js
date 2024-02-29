@@ -224,6 +224,11 @@ function storeLeadInSFDC(data) {
     console.log(response);
     data = data['req'];
     // storeLeadInDB(data["name"], data["email"], data["mobile"], JSON.stringify(response));
+    dataLayer.push({
+      'event':'form_submittion',
+      'form_name':'Elevate',
+      'form_id':'23510'
+  });
     var spinner = document.getElementById("spinner");
     spinner.classList.add("hidden");
     setTimeout(function redirect_response() { 

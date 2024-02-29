@@ -162,10 +162,10 @@ $("form").submit(function (e) {
 
   }
   if (gclid && gclid != "") {
-    campaignCode = "a025i00000dMDj7AAG";
+    campaign_code = "a025i00000dMDj7AAG";
   }
   else if (fbclid && fbclid != "") {
-    campaignCode = "a025i00000ej4m4AAA";
+    campaign_code = "a025i00000ej4m4AAA";
   }
 
   
